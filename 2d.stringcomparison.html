@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>String comparison</title>
+        <script type="text/javascript">
+            function cleantext()
+            {
+                document.getElementById("s1").value="";
+                document.getElementById("s2").value="";
+            }
+            function con()
+            {
+                var str1=document.getElementById("s1").value;
+                var str2=document.getElementById("s2").value;
+                var res= str1.localeCompare(str2);
+                console.log(str1, str2, res);
+                if(str1==""||str2=="")
+                {
+                    alert("Enter some text");
+                }
+                else if(res==0)
+                {
+                    document.getElementById("Result").innerHTML=str1+" is same as "+str2;
+                    cleantext();
+                }
+                else if(res==-1)
+                {
+                    document.getElementById("Result").innerHTML=str1+" is sorted before "+str2;
+                    cleantext();
+                }
+                else if(res==1)
+                {
+                    document.getElementById("Result").innerHTML=str1+" is sorted after "+str2;
+                    cleantext();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <form>
+                <center><h1><font color="blue">STRING COMPARISON</font></h1><br>
+                <label for="s1">String 1</label>
+                <input type="text" id="s1"><br>
+                <label for="s2">String 2</label>
+                <input type="text" id="s2"><br><br>
+                <input type="button" onclick="con()" value ="Compare">
+            </form>
+            <p id="Result"></p></center>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>String concatenation</title>
+        <script type="text/javascript">
+            function con()
+            {
+                var str1=document.getElementById("s1").value;
+                var str2=document.getElementById("s2").value;
+                var res= str1 + str2;
+                document.getElementById("result").innerHTML="Result text:"+res;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <form>
+                <center><h1><font color="blue">STRING CONCATENATION</font> </h1><br>
+                <label for="s1">String 1</label>
+                <input type="text" id="s1"><br>
+                <label for="s2">String 2</label>
+                <input type="text" id="s2"><br><br>
+                <input type="button" onclick="con()" value ="Concatenate">
+            </form>
+            <p id="result" class="result"></p></center>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<title>QUADRATIC EQUATION</title>
+<head>
+<style>
+body{
+background-color: ivory;
+text-align: center;
+}
+input[type=button]{
+padding: 15px;
+border: 12px solid rgb(123,212,182);
+border-radius: 15px;
+size: 30px;
+}
+</style>
+<script type="text/javascript">
+function Roots()
+{
+    var a =prompt("Enter value of a","-1");
+    var b =prompt("Enter value of b","-1");
+    var c =prompt("Enter value of c","4");
+    var root_part=Math.sqrt(b*b-4*a*c);
+    var denom = 2*a;
+    var root1 =(-b + root_part)/denom;
+    var root2 =(-b - root_part)/denom;
+    document.write("1st root:"+root1+"<br>");
+    document.write("2nd root:"+root2+"<br>");
+}
+</script>
+</head>
+<body>
+<h1>To Calculate Quadratic equation</h1>
+<p>Quadratic equation makes you know the different roots that function has</p>
+<input type="button" onclick="Roots()" value="Root Calculator">
+</body>
+</html>
